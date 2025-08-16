@@ -1,6 +1,6 @@
 # Cryptographic Module
 
-A comprehensive cryptographic library implementing enterprise-grade encryption and hashing algorithms built entirely from scratch in Luau.
+A comprehensive cryptographic library implementing enterprise-grade encryption and hashing algorithms.
 
 ## 🔐 Features
 
