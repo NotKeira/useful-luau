@@ -80,16 +80,22 @@ users:update({ username = "Player1" }, { coins = 1500 })
 
 ## 🔮 Future Modules
 This repository will grow with more useful Luau modules. Potential additions:
-
-- Data structures (trees, graphs, queues)
-- Utility libraries (string manipulation, math helpers)
-- Network utilities
-- File system helpers
-- Authentication systems
-- Configuration management
-- Logging frameworks
+- Player data management (profiles, sessions, cross-server data)
+- GUI frameworks (responsive layouts, animation systems, themes)
+- Game mechanics (inventory systems, questing, achievements)
+- Networking utilities (remote events, data validation, rate limiting)
+- Economy systems (shops, trading, currency management)
+- Chat & social features (filtering, friend systems, guilds)
+- Analytics & telemetry (player behaviour tracking, A/B testing)
+- Performance monitoring (memory usage, lag detection, optimization)
+- Audio management (music systems, sound pools, 3D audio)
+- Anti-cheat & security (exploit detection, data validation)
+- World generation (procedural terrain, dungeon generation)
+- Save system utilities (DataStore wrappers, backup strategies)
+- Localisation & translation systems
+- Admin commands & moderation tools
+- Monetisation helpers (developer products, game passes)
 - And more!
-
 ## 🤝 Contributing
 This is a collection of useful utilities. Feel free to:
 
