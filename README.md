@@ -33,9 +33,11 @@ local hash = Crypto.sha256Hex("hello world")
 📖 **[Full Documentation](src/Cryptographic/README.md)**
 
 ### 🗄️ [Database](src/Database/)
+
 A comprehensive in-memory & DataStoreService database system with persistence, indexing, and advanced querying capabilities.
 
 **Features:**
+
 - CRUD Operations with Advanced Querying
 - Schema Validation & Type Checking
 - Indexing System for Performance
@@ -46,6 +48,7 @@ A comprehensive in-memory & DataStoreService database system with persistence, i
 - Backup/Restore Capabilities
 
 **Quick Example:**
+
 ```luau
 local DB = require(path.to.Database)
 
@@ -74,12 +77,57 @@ users:update({ username = "Player1" }, { coins = 1500 })
 
 📖 **[Full Documentation](src/Database/README.md)**
 
+### 🎯 [GuiClickOutside](src/GuiClickOutside/)
+
+A comprehensive GUI interaction library for automatically closing Roblox ScreenGuis when clicking outside their bounds.
+
+**Features:**
+
+- Multiple Close Animations (8 built-in types)
+- Custom Handler Support
+- Type-Safe API with Full Luau Types
+- Automatic Click Detection
+- Multi-GUI Support
+- Zero Configuration Required
+- Performance Optimised
+
+**Quick Example:**
+
+```luau
+local GuiClickOutside = require(path.to.GuiClickOutside)
+local PlayerGui = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Register with animation
+local storeGui = PlayerGui:WaitForChild("Store")
+GuiClickOutside.register(storeGui, "animate_up")
+
+-- Register with fade effect
+local notificationGui = PlayerGui:WaitForChild("Notification")
+GuiClickOutside.register(notificationGui, "fade_out")
+
+-- Multiple GUIs
+local guis = {
+    {gui = PlayerGui:WaitForChild("Inventory"), closeType = "slide_right"},
+    {gui = PlayerGui:WaitForChild("Map"), closeType = "fade_out"},
+}
+
+for _, data in ipairs(guis) do
+    GuiClickOutside.register(data.gui, data.closeType)
+end
+```
+
+📖 **[Full Documentation](src/GuiClickOutside/README.md)**
+
 ## 👤 Authors
+
 **Keira Hopkins**
+
 - GitHub: [@NotKeira](https://github.com/NotKeira)
 
 ## 🔮 Future Modules
+
 This repository will grow with more useful Luau modules. Potential additions:
+
 - Player data management (profiles, sessions, cross-server data)
 - GUI frameworks (responsive layouts, animation systems, themes)
 - Game mechanics (inventory systems, questing, achievements)
@@ -87,7 +135,7 @@ This repository will grow with more useful Luau modules. Potential additions:
 - Economy systems (shops, trading, currency management)
 - Chat & social features (filtering, friend systems, guilds)
 - Analytics & telemetry (player behaviour tracking, A/B testing)
-- Performance monitoring (memory usage, lag detection, optimization)
+- Performance monitoring (memory usage, lag detection, optimisation)
 - Audio management (music systems, sound pools, 3D audio)
 - Anti-cheat & security (exploit detection, data validation)
 - World generation (procedural terrain, dungeon generation)
@@ -96,7 +144,9 @@ This repository will grow with more useful Luau modules. Potential additions:
 - Admin commands & moderation tools
 - Monetisation helpers (developer products, game passes)
 - And more!
+
 ## 🤝 Contributing
+
 This is a collection of useful utilities. Feel free to:
 
 - Report bugs or security issues
@@ -104,5 +154,6 @@ This is a collection of useful utilities. Feel free to:
 - Submit improvements or optimisations
 - Add more utility functions
 
-## 📜 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 📜 Licence
+
+This project is licenced under the MIT Licence - see the [LICENCE](LICENCE) file for details.
